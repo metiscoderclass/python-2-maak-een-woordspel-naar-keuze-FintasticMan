@@ -20,8 +20,9 @@ while boolDoorgaan:
     else:
         intPogingen = intPogingen + 1
         for i in range(len(listIdee)): #kijkt of een letter overeenkomt met idee
-            if listWoord[i] in strIdee:
-                listGeradenheid[i] = "?"
+            if listWoord[i] not in listGeradenheid[i]:
+                if listWoord[i] in strIdee:
+                    listGeradenheid[i] = "?"
             if listIdee[i] in listWoord[i]:
                 listGeradenheid[i] = listWoord[i]
         if strIdee == strWoord: #kijkt of je het woord geraden hebt
